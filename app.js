@@ -12,6 +12,7 @@ app.controller("GameController",['$scope',function($scope){
     $scope.input ={
         letter: ""
     }
+    
     var selectRandomWord = function(){
         var index =  Math.round(Math.random()*words.length);
         return words[index];
@@ -22,7 +23,6 @@ app.controller("GameController",['$scope',function($scope){
         $scope.correctLettersChosen= [];
         $scope.guesses = 6;
         $scope.displayWord = "";
-
         selectedWord = selectRandomWord();
         var tempDisplayWord = "";
         console.log(selectedWord);
@@ -55,7 +55,6 @@ app.controller("GameController",['$scope',function($scope){
                 $scope.incorrectLettersChosen.push($scope.input.letter);
                 $scope.guesses = $scope.guesses -1;    
             }       
-
         }
         $scope.displayWord = recreateDisplayWord;
         $scope.input.letter = "";
