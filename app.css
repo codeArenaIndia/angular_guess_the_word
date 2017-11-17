@@ -1,0 +1,14 @@
+.mt-md{
+    margin-top: 10px;
+}
+body{
+    font-size: 20px;
+   
+}
+.height-400{
+    height: 300px;
+}
+.big-num{
+    font-size: 100px;
+    position: relative;
+}

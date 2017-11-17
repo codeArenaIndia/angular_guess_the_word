@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess the word App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" type="text/css" href="app.css">
+    </head>
+    <body ng-app="HangmanApp" ng-controller="GameController">
+       <div class="container text-center mt-md">
+        <div class="col-md-12 height-400">
+           <div><h1  class="text-success" role="alert">Identify the word</h1><div ng-style="{ 'left' : left, 'right' : right }" class="big-num text-danger"> {{guesses}}</div><h3>Attempts left </h3></div>
+        <div class="col-md-12">
+           <div class="alert alert-success col-md-4" role="alert">Incorrect attempts : <span ng-repeat="letr in incorrectLettersChosen" >{{letr}}</span></div>
+           <div class="alert alert-info col-md-4" role="alert"> Guess this : {{displayWord}}</div>
+           <div class="alert alert-success col-md-4" role="alert">Correct attempts : <span ng-repeat="letr in correctLettersChosen">{{letr}}</span></div>
+        </div>  
+        <div class="col-md-2 col-md-offset-5">  
+            <form ng-submit="letterChosen()">
+            <div > <input type="text" style='text-transform:lowercase' class="form-control" maxlength="1" name="guess" id="guess" ng-model="input.letter" value="hello" placeholder="Enter Alphabet"></div>
+            <div class="mt-md">  <button class="btn btn-success">Submit</button></div>
+            <div>{{result}}</div>
+            </form>
+        </div>
+       </div>
+    </body>
+</html>
