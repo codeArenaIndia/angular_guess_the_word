@@ -1,0 +1,15 @@
+body{
+    margin : 0;
+    padding: 0;
+}
+.card,#cvv,#exp_date{
+    width: 300px;
+    height: 25px;
+}
+#sub_btn{
+    width: 300px;
+    margin-top: 5px;
+    height: 25px;
+    color: #fff;
+    background: brown;
+}
